@@ -1,1 +1,50 @@
-<p>servicio works!</p>
+<section class="bg-gray-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+                Servicio de {{ seleccionado.titulo }} 
+            </h2>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-xl mb-20">
+            <video class="w-full h-[320px] md:h-[480px] object-cover" controls>
+                <source [src]="seleccionado.video" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <p class="mt-6 text-gray-600 leading-relaxed">
+                {{ seleccionado.descripcion }}
+            </p>
+        </div>
+
+        <!-- Beneficios -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+            <div *ngFor="let beneficio of seleccionado.beneficios"
+                class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition flex items-start gap-4">
+
+                <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#6BCB3D]/10">
+                    <div class="w-4 h-4 rounded-full bg-[#6BCB3D]"></div>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed">
+                    {{ beneficio }}
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-20 text-center">
+            <button class="bg-[#6BCB3D] text-white font-semibold px-10 py-4 rounded-full shadow-lg
+        transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 active:scale-95">
+                Contar con asesor
+            </button>
+        </div>
+
+    </div>
+</section>
