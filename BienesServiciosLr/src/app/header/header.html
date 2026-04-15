@@ -52,11 +52,11 @@
     <div *ngIf="menuOpen"
         class="md:hidden flex flex-col items-center gap-6 py-8 border-t border-gray-200 bg-white text-gray-700 font-medium text-sm animate-fade">
 
-        <a href="#" class="hover:text-gray-900 transition">Inicio</a>
+        <a routerLink="/" class="hover:text-gray-900 transition">Inicio</a>
 
-        <a href="#" class="hover:text-gray-900 transition">¿Qué hacemos?</a>
+        <a routerLink="/labores" class="hover:text-gray-900 transition">¿Qué hacemos?</a>
 
-        <a href="#" class="hover:text-gray-900 transition">Quiénes somos</a>
+        <a routerLink="/nosotros" class="hover:text-gray-900 transition">Quiénes somos</a>
 
         <button
             class="cursor-pointer bg-[#6BCB3D] hover:bg-[#58b52e] text-white font-semibold px-7 py-2 rounded-full tracking-wide text-sm shadow-md transition">
@@ -66,4 +66,3 @@
     </div>
 
 </nav>
-
