@@ -10,17 +10,32 @@ import { Component } from '@angular/core';
 export class Inicio {
   proyectos = [
     {
-      imagen: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      imagen: "/CarruselInicio/img_1.webp",
       titulo: "Residencial Los Olivos",
       descripcion: "Proyecto residencial con excelente ubicación y alta proyección de valorización."
     },
     {
-      imagen: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+      imagen: "/CarruselInicio/img_2.webp",
       titulo: "Urbanización Santa María",
       descripcion: "Terrenos con acceso a vías principales y servicios urbanos completos."
     },
     {
-      imagen: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
+      imagen: "/CarruselInicio/img_3.webp",
+      titulo: "Condominio Vista Verde",
+      descripcion: "Un espacio ideal para invertir y construir el hogar de tus sueños."
+    },
+    {
+      imagen: "/CarruselInicio/img_4.webp",
+      titulo: "Residencial Los Olivos",
+      descripcion: "Proyecto residencial con excelente ubicación y alta proyección de valorización."
+    },
+    {
+      imagen: "/CarruselInicio/img_5.webp",
+      titulo: "Urbanización Santa María",
+      descripcion: "Terrenos con acceso a vías principales y servicios urbanos completos."
+    },
+    {
+      imagen: "/CarruselInicio/img_6.webp",
       titulo: "Condominio Vista Verde",
       descripcion: "Un espacio ideal para invertir y construir el hogar de tus sueños."
     }
