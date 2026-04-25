@@ -38,6 +38,31 @@ export class Inicio {
       imagen: "/CarruselInicio/img_6.webp",
       titulo: "Condominio Vista Verde",
       descripcion: "Un espacio ideal para invertir y construir el hogar de tus sueños."
+    },
+    {
+      imagen: "/CarruselInicio/img_7.webp",
+      titulo: "Condominio Vista Verde",
+      descripcion: "Un espacio ideal para invertir y construir el hogar de tus sueños."
+    },
+    {
+      imagen: "/CarruselInicio/img_8.webp",
+      titulo: "Residencial Los Olivos",
+      descripcion: "Proyecto residencial con excelente ubicación y alta proyección de valorización."
+    },
+    {
+      imagen: "/CarruselInicio/img_9.webp",
+      titulo: "Urbanización Santa María",
+      descripcion: "Terrenos con acceso a vías principales y servicios urbanos completos."
+    },
+    {
+      imagen: "/CarruselInicio/img_10.webp",
+      titulo: "Condominio Vista Verde",
+      descripcion: "Un espacio ideal para invertir y construir el hogar de tus sueños."
+    },
+    {
+      imagen: "/CarruselInicio/img_11.webp",
+      titulo: "Condominio Vista Verde",
+      descripcion: "Un espacio ideal para invertir y construir el hogar de tus sueños."
     }
   ];
 
