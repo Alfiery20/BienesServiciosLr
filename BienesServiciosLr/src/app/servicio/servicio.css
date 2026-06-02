@@ -242,3 +242,38 @@
   font-size: 13px;
   color: #8a9a7a;
 }
+
+.srv-back {
+  margin-bottom: 24px;
+}
+
+.srv-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid #e8f0df;
+  color: #5a6a4a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.srv-back-btn svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.srv-back-btn:hover {
+  background: #f0fae8;
+  border-color: #6bcb3d;
+  color: #1a2210;
+}

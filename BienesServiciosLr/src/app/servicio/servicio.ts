@@ -74,4 +74,12 @@ export class Servicio implements OnInit {
       this.seleccionado = this.servicios[labor];
     });
   }
+
+  enviarMensaje() {
+    var message = `Hola, estoy interesado en ${this.seleccionado.titulo}. ¿Podrían brindarme más información?`,
+      phone = '949307515';
+
+    const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
 }
