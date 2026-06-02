@@ -1,68 +1,85 @@
-<nav class="w-full sticky top-0 z-50 backdrop-blur bg-white/90 border-b border-gray-200">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+<nav class="nav">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a routerLink="/" class="nav-logo">
+      <img src="Logo.jpg" alt="Logo" class="nav-logo-img" />
+    </a>
 
-        <div class="flex items-center">
-            <img src="Logo.jpg" alt="Logo" class="h-10 w-auto">
-        </div>
+    <!-- Links desktop -->
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/" routerLinkActive="active" routerLinkActiveOptions="{ exact: true }">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a routerLink="/labores" routerLinkActive="active"> ¿Qué hacemos? </a>
+      </li>
+      <li>
+        <a routerLink="/nosotros" routerLinkActive="active"> Quiénes somos </a>
+      </li>
+    </ul>
 
-        <ul class="hidden md:flex items-center gap-10 text-gray-700 font-medium text-sm tracking-wide">
-
-            <li>
-                <a routerLink="/" routerLinkActive="text-gray-900 after:w-full"
-                    class="relative hover:text-gray-900 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-[#6BCB3D] after:transition-all hover:after:w-full">
-                    Inicio
-                </a>
-            </li>
-
-            <li>
-                <a routerLink="/labores" routerLinkActive="text-gray-900 after:w-full"
-                    class="relative hover:text-gray-900 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-[#6BCB3D] after:transition-all hover:after:w-full">
-                    ¿Qué hacemos?
-                </a>
-            </li>
-
-            <li>
-                <a routerLink="/nosotros" routerLinkActive="text-gray-900 after:w-full"
-                    class="relative hover:text-gray-900 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-[#6BCB3D] after:transition-all hover:after:w-full">
-                    Quiénes somos
-                </a>
-            </li>
-
-        </ul>
-
-        <div class="hidden md:block">
-
-            <button
-                class="cursor-pointer bg-[#6BCB3D] hover:bg-[#58b52e] text-white font-semibold px-7 py-2 rounded-full tracking-wide text-sm shadow-md hover:shadow-lg transition">
-                Habla con un experto
-            </button>
-
-        </div>
-
-        <button (click)="toggleMenu()" class="md:hidden flex flex-col gap-1.5 cursor-pointer">
-
-            <span class="w-6 h-[2px] bg-gray-800"></span>
-            <span class="w-6 h-[2px] bg-gray-800"></span>
-            <span class="w-6 h-[2px] bg-gray-800"></span>
-
-        </button>
-
+    <!-- CTA desktop -->
+    <div class="nav-cta-wrap">
+      <button class="nav-cta" type="button">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+            A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.97 3.18 2 2 0 0 1
+            3.94 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1
+            -.45 2.11L8.09 8.91a16 16 0 0 0 5.61 5.61l1.27-1.27a2 2 0 0 1
+            2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </svg>
+        Habla con un experto
+      </button>
     </div>
 
-    <div *ngIf="menuOpen"
-        class="md:hidden flex flex-col items-center gap-6 py-8 border-t border-gray-200 bg-white text-gray-700 font-medium text-sm animate-fade">
+    <!-- Hamburger -->
+    <button
+      class="nav-burger"
+      [class.open]="menuOpen"
+      (click)="toggleMenu()"
+      type="button"
+      aria-label="Abrir menú"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 
-        <a routerLink="/" class="hover:text-gray-900 transition">Inicio</a>
-
-        <a routerLink="/labores" class="hover:text-gray-900 transition">¿Qué hacemos?</a>
-
-        <a routerLink="/nosotros" class="hover:text-gray-900 transition">Quiénes somos</a>
-
-        <button
-            class="cursor-pointer bg-[#6BCB3D] hover:bg-[#58b52e] text-white font-semibold px-7 py-2 rounded-full tracking-wide text-sm shadow-md transition">
-            Habla con un experto
-        </button>
-
-    </div>
-
+  <!-- Menú móvil -->
+  <div class="nav-mobile" *ngIf="menuOpen">
+    <a routerLink="/" (click)="toggleMenu()">Inicio</a>
+    <a routerLink="/labores" (click)="toggleMenu()">¿Qué hacemos?</a>
+    <a routerLink="/nosotros" (click)="toggleMenu()">Quiénes somos</a>
+    <button class="nav-cta" type="button">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="white"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+          A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.97 3.18 2 2 0 0 1
+          3.94 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1
+          -.45 2.11L8.09 8.91a16 16 0 0 0 5.61 5.61l1.27-1.27a2 2 0 0 1
+          2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+        />
+      </svg>
+      Habla con un experto
+    </button>
+  </div>
 </nav>

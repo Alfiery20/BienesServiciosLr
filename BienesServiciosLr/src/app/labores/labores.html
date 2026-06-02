@@ -1,83 +1,96 @@
-<section class="bg-gray-50 py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Nuestros Servicios</h2>
-      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-        Ofrecemos soluciones inmobiliarias pensadas para brindarte seguridad, crecimiento y
-        oportunidades de inversión.
+<!-- ══════════════════════════════════════════
+     SECCIÓN 1: SERVICIOS
+══════════════════════════════════════════ -->
+<section class="dot-bg sec">
+  <div class="inner">
+    <div class="sec-head">
+      <span class="sec-label"><span class="sec-label-dot"></span>Lo que hacemos</span>
+      <h2 class="sec-title">Nuestros <span>Servicios</span></h2>
+      <p class="sec-sub">
+        Soluciones inmobiliarias pensadas para brindarte seguridad, crecimiento y oportunidades de
+        inversión.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div
-        class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition overflow-hidden group flex flex-col"
-      >
-        <div class="overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-            class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
-          />
+    <div class="srv-grid">
+      <div class="srv-card" style="animation-delay: 0.05s">
+        <div class="srv-img-wrap">
+          <img src="./Servicios/RegistraPropiedad.webp" alt="Registra tu propiedad" />
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Registra tu propiedad</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
+        <div class="srv-body">
+          <h3>Registra tu propiedad</h3>
+          <p>
             Nos encargamos de todo el proceso técnico y legal, desde la verificación catastral hasta
-            la inscripción en registros públicos, garantizando que tu inmueble cuente con respaldo
-            jurídico y valor real en el mercado.
+            la inscripción en registros públicos, garantizando respaldo jurídico y valor real en el
+            mercado.
           </p>
-          <button
-            (click)="enviarServicio('registro')"
-            class="cursor-pointer mt-6 mb-4 bg-[#6BCB3D] hover:bg-[#58b52e] text-white font-semibold px-6 py-2 rounded-full text-sm w-fit transition shadow-md hover:shadow-lg"
-          >
+          <button class="srv-btn" (click)="enviarServicio('registro')">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
             Más información
           </button>
         </div>
       </div>
 
-      <div
-        class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition overflow-hidden group flex flex-col"
-      >
-        <div class="overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa"
-            class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
-          />
+      <div class="srv-card" style="animation-delay: 0.15s">
+        <div class="srv-img-wrap">
+          <img src="./Servicios/ConstruyeCasa.webp" alt="Construye tu casa" />
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Construye tu casa</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
+        <div class="srv-body">
+          <h3>Construye tu casa</h3>
+          <p>
             Hacemos realidad tu proyecto de vivienda con soluciones integrales en diseño,
             construcción y supervisión, garantizando calidad, seguridad y cumplimiento en cada
             etapa.
           </p>
-          <button
-            (click)="enviarServicio('construye')"
-            class="cursor-pointer mt-6 mb-4 bg-[#6BCB3D] hover:bg-[#58b52e] text-white font-semibold px-6 py-2 rounded-full text-sm w-fit transition shadow-md hover:shadow-lg"
-          >
+          <button class="srv-btn" (click)="enviarServicio('construye')">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
             Más información
           </button>
         </div>
       </div>
 
-      <div
-        class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition overflow-hidden group flex flex-col"
-      >
-        <div class="overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
-            class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
-          />
+      <div class="srv-card" style="animation-delay: 0.25s">
+        <div class="srv-img-wrap">
+          <img src="./Servicios/InvierteSeguro.webp" alt="Invierte seguro" />
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Invierte seguro</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Toma decisiones con confianza, evaluamos cada aspecto legal y técnico para asegurar una
+        <div class="srv-body">
+          <h3>Invierte seguro</h3>
+          <p>
+            Toma decisiones con confianza; evaluamos cada aspecto legal y técnico para asegurar una
             inversión rentable y libre de riesgos.
           </p>
-          <button
-            (click)="enviarServicio('invierte')"
-            class="cursor-pointer mt-6 mb-4 bg-[#6BCB3D] hover:bg-[#58b52e] text-white font-semibold px-6 py-2 rounded-full text-sm w-fit transition shadow-md hover:shadow-lg"
-          >
+          <button class="srv-btn" (click)="enviarServicio('invierte')">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
             Más información
           </button>
         </div>
@@ -86,84 +99,113 @@
   </div>
 </section>
 
-<section class="bg-gray-50 py-20">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-8 text-center">
-        <p class="text-4xl font-bold text-[#6BCB3D]">15+</p>
-        <p class="mt-2 text-gray-600 text-sm">Proyectos completados</p>
-      </div>
+<!-- ══════════════════════════════════════════
+     SECCIÓN 2: ESTADÍSTICAS
+══════════════════════════════════════════ -->
+<section class="stats-sec">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <p class="stat-num">15+</p>
+      <p class="stat-label">Proyectos completados</p>
+    </div>
 
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-8 text-center">
-        <p class="text-4xl font-bold text-[#6BCB3D]">95%</p>
-        <p class="mt-2 text-gray-600 text-sm">Clientes satisfechos</p>
-      </div>
+    <div class="stat-item">
+      <p class="stat-num">95%</p>
+      <p class="stat-label">Clientes satisfechos</p>
+    </div>
 
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-8 text-center">
-        <p class="text-4xl font-bold text-[#6BCB3D]">5+</p>
-        <p class="mt-2 text-gray-600 text-sm">Años de experiencia</p>
-      </div>
+    <div class="stat-item">
+      <p class="stat-num">5+</p>
+      <p class="stat-label">Años de experiencia</p>
+    </div>
 
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-8 text-center">
-        <p class="text-4xl font-bold text-[#6BCB3D]">50+</p>
-        <p class="mt-2 text-gray-600 text-sm">Terrenos vendidos</p>
-      </div>
+    <div class="stat-item">
+      <p class="stat-num">50+</p>
+      <p class="stat-label">Terrenos vendidos</p>
     </div>
   </div>
 </section>
 
-<section class="bg-gray-50 py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Lo que dicen nuestros clientes</h2>
-      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+<!-- ══════════════════════════════════════════
+     SECCIÓN 3: TESTIMONIOS
+══════════════════════════════════════════ -->
+<!-- <section class="dot-bg sec">
+  <div class="inner">
+    <div class="sec-head">
+      <span class="sec-label"><span class="sec-label-dot"></span>Testimonios</span>
+      <h2 class="sec-title">Lo que dicen nuestros <span>clientes</span></h2>
+      <p class="sec-sub">
         Nuestros clientes confían en nosotros para tomar decisiones importantes en sus inversiones
         inmobiliarias.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition p-8 flex flex-col">
-        <p class="text-gray-600 text-sm leading-relaxed">
-          "El proceso de compra fue claro y transparente. El equipo nos acompañó en cada paso y hoy
-          tenemos un terreno con gran proyección de valorización."
+    <div class="t-grid">
+      <div class="t-card" style="animation-delay: 0.05s">
+        <div class="t-quote">"</div>
+        <div class="t-stars">
+          <svg *ngFor="let s of [1, 2, 3, 4, 5]" class="t-star" viewBox="0 0 24 24">
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+        </div>
+        <p class="t-text">
+          El proceso de compra fue claro y transparente. El equipo nos acompañó en cada paso y hoy
+          tenemos un terreno con gran proyección de valorización.
         </p>
-        <div class="flex items-center mt-6">
-          <img src="https://i.pravatar.cc/100?img=12" class="w-12 h-12 rounded-full object-cover" />
-          <div class="ml-4">
-            <p class="font-semibold text-gray-900">Carlos Mendoza</p>
-            <p class="text-xs text-gray-500">Inversionista</p>
+        <div class="t-author">
+          <img class="t-avatar" src="https://i.pravatar.cc/100?img=12" alt="Carlos Mendoza" />
+          <div>
+            <p class="t-name">Carlos Mendoza</p>
+            <p class="t-role">Inversionista</p>
           </div>
         </div>
       </div>
 
-      <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition p-8 flex flex-col">
-        <p class="text-gray-600 text-sm leading-relaxed">
-          "Gracias a su asesoría pudimos elegir un proyecto con excelente ubicación. Fue una
-          experiencia profesional y muy segura."
+      <div class="t-card" style="animation-delay: 0.15s">
+        <div class="t-quote">"</div>
+        <div class="t-stars">
+          <svg *ngFor="let s of [1, 2, 3, 4, 5]" class="t-star" viewBox="0 0 24 24">
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+        </div>
+        <p class="t-text">
+          Gracias a su asesoría pudimos elegir un proyecto con excelente ubicación. Fue una
+          experiencia profesional y muy segura.
         </p>
-        <div class="flex items-center mt-6">
-          <img src="https://i.pravatar.cc/100?img=32" class="w-12 h-12 rounded-full object-cover" />
-          <div class="ml-4">
-            <p class="font-semibold text-gray-900">María Fernández</p>
-            <p class="text-xs text-gray-500">Cliente</p>
+        <div class="t-author">
+          <img class="t-avatar" src="https://i.pravatar.cc/100?img=32" alt="María Fernández" />
+          <div>
+            <p class="t-name">María Fernández</p>
+            <p class="t-role">Cliente</p>
           </div>
         </div>
       </div>
 
-      <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition p-8 flex flex-col">
-        <p class="text-gray-600 text-sm leading-relaxed">
-          "Recomiendo totalmente sus proyectos. La información fue clara desde el inicio y el
-          proceso fue rápido y confiable."
+      <div class="t-card" style="animation-delay: 0.25s">
+        <div class="t-quote">"</div>
+        <div class="t-stars">
+          <svg *ngFor="let s of [1, 2, 3, 4, 5]" class="t-star" viewBox="0 0 24 24">
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+        </div>
+        <p class="t-text">
+          Recomiendo totalmente sus proyectos. La información fue clara desde el inicio y el proceso
+          fue rápido y confiable.
         </p>
-        <div class="flex items-center mt-6">
-          <img src="https://i.pravatar.cc/100?img=45" class="w-12 h-12 rounded-full object-cover" />
-          <div class="ml-4">
-            <p class="font-semibold text-gray-900">Luis Ramírez</p>
-            <p class="text-xs text-gray-500">Comprador</p>
+        <div class="t-author">
+          <img class="t-avatar" src="https://i.pravatar.cc/100?img=45" alt="Luis Ramírez" />
+          <div>
+            <p class="t-name">Luis Ramírez</p>
+            <p class="t-role">Comprador</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->

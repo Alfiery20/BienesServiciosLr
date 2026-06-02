@@ -1,46 +1,67 @@
-<section class="bg-gray-50 py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
-      <div>
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Sobre Nuestra Empresa</h2>
-        <p class="mt-6 text-gray-600 leading-relaxed">
+<!-- ══════════════════════════════════════════
+     SECCIÓN 1: SOBRE NOSOTROS
+══════════════════════════════════════════ -->
+<section class="dot-bg sec">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="sec-label"><span class="sec-label-dot"></span>Quiénes somos</span>
+        <h2 class="sec-title">Sobre Nuestra <span>Empresa</span></h2>
+        <p class="sec-sub">
           Somos una empresa inmobiliaria enfocada en el desarrollo y comercialización de proyectos
           con alto potencial de crecimiento. Nuestro objetivo es ofrecer oportunidades seguras de
           inversión y acompañar a nuestros clientes en cada etapa del proceso.
         </p>
-        <p class="mt-4 text-gray-600 leading-relaxed">
+        <p class="sec-sub" style="margin-top: 14px">
           Trabajamos con transparencia, planificación estratégica y una visión clara de desarrollo
           urbano para generar valor sostenible en cada proyecto.
         </p>
       </div>
 
-      <div class="overflow-hidden rounded-3xl shadow-lg">
-        <img
-          src="/EquipoQuienesSomos.webp"
-          class="w-full h-[420px] object-cover hover:scale-105 transition duration-500"
-        />
+      <div class="about-img">
+        <img src="/EquipoQuienesSomos.webp" alt="Equipo de trabajo" />
       </div>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-10">
-      <div class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition p-10">
-        <div class="w-12 h-12 bg-[#6BCB3D]/10 rounded-xl flex items-center justify-center mb-6">
-          <div class="w-5 h-5 bg-[#6BCB3D] rounded-full"></div>
+    <div class="mv-grid">
+      <div class="mv-card">
+        <div class="mv-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#6BCB3D"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 8v4l3 3" />
+          </svg>
         </div>
-        <h3 class="text-2xl font-bold text-gray-900">Nuestra Misión</h3>
-        <p class="mt-4 text-gray-600 leading-relaxed">
+        <h3>Nuestra Misión</h3>
+        <p>
           Brindar soluciones inmobiliarias confiables que permitan a nuestros clientes invertir con
           seguridad, ofreciendo proyectos bien planificados que generen crecimiento y valorización a
           largo plazo.
         </p>
       </div>
 
-      <div class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition p-10">
-        <div class="w-12 h-12 bg-[#6BCB3D]/10 rounded-xl flex items-center justify-center mb-6">
-          <div class="w-5 h-5 bg-[#6BCB3D] rounded-full"></div>
+      <div class="mv-card">
+        <div class="mv-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#6BCB3D"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
         </div>
-        <h3 class="text-2xl font-bold text-gray-900">Nuestra Visión</h3>
-        <p class="mt-4 text-gray-600 leading-relaxed">
+        <h3>Nuestra Visión</h3>
+        <p>
           Convertirnos en una empresa referente en el desarrollo de proyectos inmobiliarios
           innovadores, impulsando comunidades sostenibles y generando valor para nuestros clientes.
         </p>
@@ -49,120 +70,183 @@
   </div>
 </section>
 
-<section class="bg-gray-50 py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
-      <div class="overflow-hidden rounded-3xl shadow-lg">
-        <div class="relative">
-          <div class="overflow-hidden rounded-3xl shadow-2xl relative">
-            <img
-              [src]="proyectos[indiceActual].imagen"
-              class="w-full h-[450px] md:h-[700px] object-cover transition duration-700"
-            />
-
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"
-            ></div>
-
-            <!-- <div class="absolute bottom-10 left-10 text-white max-w-lg">
-
-                            <h3 class="text-2xl md:text-3xl font-bold mb-2">
-                                {{ proyectos[indiceActual].titulo }}
-                            </h3>
-
-                            <p class="text-sm md:text-base text-gray-200">
-                                {{ proyectos[indiceActual].descripcion }}
-                            </p>
-
-                        </div> -->
-          </div>
-
-          <button
-            (click)="anterior()"
-            class="cursor-pointer absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 w-12 h-12 rounded-full shadow flex items-center justify-center text-xl"
+<!-- ══════════════════════════════════════════
+     SECCIÓN 2: EQUIPO
+══════════════════════════════════════════ -->
+<section class="sec team-sec">
+  <div class="inner">
+    <div class="team-grid">
+      <div class="carousel-wrap">
+        <img class="carousel-img" [src]="proyectos[indiceActual].imagen" alt="Equipo de trabajo" />
+        <button class="car-btn car-btn-l" (click)="anterior()" title="Anterior" type="button">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-            <i class="fa-solid fa-angle-left"></i>
-          </button>
-
-          <button
-            (click)="siguiente()"
-            class="cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 w-12 h-12 rounded-full shadow flex items-center justify-center text-xl"
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <button class="car-btn car-btn-r" (click)="siguiente()" title="Siguiente" type="button">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
-        </div>
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
       </div>
-      <div>
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Nuestro equipo de trabajo</h2>
-        <p class="mt-6 text-gray-600 leading-relaxed">
+
+      <div class="team-text">
+        <span class="sec-label"><span class="sec-label-dot"></span>El equipo</span>
+        <h2 class="sec-title">Nuestro equipo de <span>trabajo</span></h2>
+        <p class="sec-sub">
           Contamos con un equipo de profesionales altamente capacitados y comprometidos con la
           excelencia en el servicio, dedicados a brindar soluciones inmobiliarias personalizadas y
           eficientes para nuestros clientes.
         </p>
-        <p class="mt-4 text-gray-600 leading-relaxed">
-          Somo una constructora e inmobiliaria dedicada a comercializar diversas áreas de terreno
-          que garanticen una buena calidad de vida a nuestros clientes, a través de la adecuada
-          gestión de saneamiento, ubicación y legalidad de documentos.
+        <p class="sec-sub" style="margin-top: 14px">
+          Somos una constructora e inmobiliaria dedicada a comercializar diversas áreas de terreno
+          que garanticen una buena calidad de vida, a través de la adecuada gestión de saneamiento,
+          ubicación y legalidad de documentos.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-[#6BCB3D] py-15">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-4xl md:text-5xl font-bold text-white">Encuentra tu próxima inversión</h2>
-    <p class="mt-6 text-white/90 max-w-2xl mx-auto">
+<!-- ══════════════════════════════════════════
+     SECCIÓN 3: CTA
+══════════════════════════════════════════ -->
+<section class="cta-sec">
+  <div class="cta-inner">
+    <span class="cta-label"><span class="cta-label-dot"></span>Empieza hoy</span>
+    <h2 class="cta-title">Encuentra tu próxima inversión</h2>
+    <p class="cta-sub">
       Descubre nuestros proyectos disponibles y recibe asesoría personalizada para elegir la mejor
       oportunidad inmobiliaria.
     </p>
-
-    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-      <button
-        class="cursor-pointer bg-white text-gray-900 font-semibold px-8 py-3 rounded-full shadow-md transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 hover:scale-105 active:scale-95"
+    <button class="cta-btn" type="button">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#6BCB3D"
+        stroke-width="2.5"
+        stroke-linecap="round"
       >
-        Contactar asesor
-      </button>
-    </div>
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+          A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.97 3.18 2 2 0 0 1 3.94
+          1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11
+          L8.09 8.91a16 16 0 0 0 5.61 5.61l1.27-1.27a2 2 0 0 1 2.11-.45
+          c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+        />
+      </svg>
+      Contactar asesor
+    </button>
   </div>
 </section>
 
-<section class="bg-gray-50 py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-14">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Nuestra Ubicación</h2>
-      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+<!-- ══════════════════════════════════════════
+     SECCIÓN 4: UBICACIÓN
+══════════════════════════════════════════ -->
+<section class="dot-bg sec">
+  <div class="inner">
+    <div class="loc-header">
+      <span class="sec-label"><span class="sec-label-dot"></span>Encuéntranos</span>
+      <h2 class="sec-title">Nuestra <span>Ubicación</span></h2>
+      <p class="sec-sub">
         Visítanos en nuestra oficina o contáctanos para recibir asesoría personalizada.
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <!-- Mapa -->
-      <div class="rounded-3xl overflow-hidden shadow-lg">
+    <div class="loc-grid">
+      <div class="loc-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.431886404173!2d-79.93909337468271!3d-6.83871201677201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cfac72567d44b%3A0x725e5069165f16f1!2sLima%20524%2C%20Pimentel%2014000!5e0!3m2!1ses-419!2spe!4v1777146138551!5m2!1ses-419!2spe"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
+          allowfullscreen
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
 
-      <!-- Información -->
-      <div class="bg-white rounded-3xl shadow-lg p-10">
-        <h3 class="text-2xl font-bold text-gray-900">Oficina principal</h3>
-
-        <p class="mt-4 text-gray-600 leading-relaxed">
-          Estamos ubicados en el balnerario turístico de Pimentel. Nuestro equipo está listo para
+      <div class="loc-card">
+        <h3>Oficina principal</h3>
+        <p class="loc-intro">
+          Estamos ubicados en el balneario turístico de Pimentel. Nuestro equipo está listo para
           brindarte asesoría sobre nuestros proyectos y oportunidades de inversión.
         </p>
 
-        <div class="mt-6 space-y-3 text-gray-600 text-sm">
-          <p><strong>Dirección:</strong> Calle Lima # 524 - Pimentel</p>
-          <p><strong>Horario:</strong> Lunes a Viernes - 9:00 a 18:00</p>
-          <p><strong>Teléfono:</strong> +51 949 307 515</p>
+        <div class="loc-row">
+          <div class="loc-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#6BCB3D"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div>
+            <p class="loc-info-label">Dirección</p>
+            <p class="loc-info-val">Calle Lima # 524 — Pimentel</p>
+          </div>
+        </div>
+
+        <div class="loc-row">
+          <div class="loc-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#6BCB3D"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <div>
+            <p class="loc-info-label">Horario</p>
+            <p class="loc-info-val">Lunes a Viernes · 9:00 – 18:00</p>
+          </div>
+        </div>
+
+        <div class="loc-row">
+          <div class="loc-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#6BCB3D"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+                A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.97 3.18 2 2 0 0 1 3.94
+                1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45
+                2.11L8.09 8.91a16 16 0 0 0 5.61 5.61l1.27-1.27a2 2 0 0 1
+                2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+          </div>
+          <div>
+            <p class="loc-info-label">Teléfono</p>
+            <p class="loc-info-val">+51 949 307 515</p>
+          </div>
         </div>
       </div>
     </div>

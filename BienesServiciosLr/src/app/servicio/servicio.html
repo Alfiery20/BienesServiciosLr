@@ -1,50 +1,77 @@
-<section class="bg-gray-50 py-24">
-    <div class="max-w-7xl mx-auto px-6">
-
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
-                Servicio de {{ seleccionado.titulo }} 
-            </h2>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-xl mb-20">
-            <video class="w-full h-[320px] md:h-[480px] object-cover" controls>
-                <source [src]="seleccionado.video" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <p class="mt-6 text-gray-600 leading-relaxed">
-                {{ seleccionado.descripcion }}
-            </p>
-        </div>
-
-        <!-- Beneficios -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-
-            <div *ngFor="let beneficio of seleccionado.beneficios"
-                class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition flex items-start gap-4">
-
-                <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#6BCB3D]/10">
-                    <div class="w-4 h-4 rounded-full bg-[#6BCB3D]"></div>
-                </div>
-
-                <p class="text-gray-600 leading-relaxed">
-                    {{ beneficio }}
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div class="mt-20 text-center">
-            <button class="bg-[#6BCB3D] text-white font-semibold px-10 py-4 rounded-full shadow-lg
-        transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 active:scale-95">
-                Contar con asesor
-            </button>
-        </div>
-
+<section class="srv-section">
+  <div class="srv-inner">
+    <!-- Header -->
+    <div class="srv-header">
+      <div class="srv-label-wrap">
+        <span class="srv-label">
+          <span class="srv-label-dot"></span>
+          Nuestros servicios
+        </span>
+      </div>
+      <h2 class="srv-title">
+        Servicio de <span class="srv-title-accent">{{ seleccionado.titulo }}</span>
+      </h2>
+      <p class="srv-desc">{{ seleccionado.descripcion }}</p>
     </div>
+
+    <!-- Video -->
+    <div class="srv-video-wrap">
+      <video class="srv-video" controls>
+        <source [src]="seleccionado.video" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- Beneficios -->
+    <div class="srv-benefits-label">
+      <h3>¿Por qué elegirnos?</h3>
+      <p class="srv-benefits-sub">Beneficios diseñados para tu crecimiento</p>
+    </div>
+
+    <div class="srv-grid">
+      <div
+        class="srv-card"
+        *ngFor="let beneficio of seleccionado.beneficios; let i = index"
+        [style.animation-delay]="i * 0.1 + 's'"
+      >
+        <div class="srv-card-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#6BCB3D"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <p>{{ beneficio }}</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="srv-cta">
+      <button class="srv-cta-btn" type="button">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+            A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.97 3.18 2 2 0 0 1 3.94
+            1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45
+            2.11L8.09 8.91a16 16 0 0 0 5.61 5.61l1.27-1.27a2 2 0 0 1
+            2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </svg>
+        Hablar con un asesor
+      </button>
+      <p class="srv-cta-sub">Sin compromiso · Respuesta en menos de 24 h</p>
+    </div>
+  </div>
 </section>

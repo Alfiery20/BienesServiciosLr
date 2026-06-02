@@ -11,28 +11,28 @@ export class Inicio {
   proyectos = [
     {
       imagen: "/CarruselInicio/img_1.webp",
-      titulo: "Residencial Los Olivos",
-      descripcion: "Proyecto residencial con excelente ubicación y alta proyección de valorización."
-    },
-    {
-      imagen: "/CarruselInicio/img_2.webp",
-      titulo: "Urbanización Santa María",
-      descripcion: "Terrenos con acceso a vías principales y servicios urbanos completos."
-    },
-    {
-      imagen: "/CarruselInicio/img_3.webp",
-      titulo: "Condominio Vista Verde",
+      titulo: "Lotizacion San Diego",
       descripcion: "Un espacio ideal para invertir y construir el hogar de tus sueños."
     },
     {
+      imagen: "/CarruselInicio/img_2.webp",
+      titulo: "Vivienda en el Fundo San Lorenzo",
+      descripcion: "Proyecto unifamiliar con una construcción de calidad."
+    },
+    {
+      imagen: "/CarruselInicio/img_3.webp",
+      titulo: "Vivienda en distrito de Santa Rosa",
+      descripcion: "Te asesoramos para construir el hogar que siempre soñaste."
+    },
+    {
       imagen: "/CarruselInicio/img_4.webp",
-      titulo: "Residencial Los Olivos",
-      descripcion: "Proyecto residencial con excelente ubicación y alta proyección de valorización."
+      titulo: "Asesoramiento Personalizado",
+      descripcion: "Te asesoramos con profesionales de calidad para cada paso de tu inversión."
     },
     {
       imagen: "/CarruselInicio/img_5.webp",
-      titulo: "Urbanización Santa María",
-      descripcion: "Terrenos con acceso a vías principales y servicios urbanos completos."
+      titulo: "Proyecto en el distrito de Santa Rosa",
+      descripcion: "Entregamos más que una vivienda, entregamos un sueño cumplido."
     }
   ];
 

@@ -17,43 +17,61 @@ interface ServicioInfo {
   styleUrl: './servicio.css',
 })
 export class Servicio implements OnInit {
-
   servicios: Record<string, ServicioInfo> = {
     registro: {
       titulo: 'Registra tu propiedad',
-      descripcion: 'Accede a terrenos ubicados en zonas estratégicas con alto potencial de crecimiento urbano.',
-      video: 'assets/video/registro.mp4',
-      beneficios: ["Poda profesional", "Diseño paisajístico", "Mantenimiento mensual"]
+      descripcion: 'Regularizar tu propiedad de manera rápida, segura y conforme a la ley.',
+      video: './Servicios/video_3.mp4',
+      beneficios: [
+        'Certificado de búsqueda catastral.',
+        'Tramites de copias literales.',
+        'Inscripción de predio.',
+        'Independizaciones',
+        'Subdivisiones.',
+        'Trámites municipales.',
+      ],
     },
     construye: {
       titulo: 'Construye tu casa',
-      descripcion: 'Desarrollamos proyectos inmobiliarios con planificación estratégica y visión de crecimiento.',
-      video: 'assets/video/construye.mp4',
-      beneficios: ["Acabados profesionales", "Materiales de calidad", "Trabajo garantizado"]
+      descripcion: 'Construye tu proyecto que siempre soñaste con el respaldo de expertos.',
+      video: './Servicios/video_1.mp4',
+      beneficios: [
+        'Asesoría técnica legal gratuita.',
+        'Elaboración de anteproyecto.',
+        'Elaboración de proyecto.',
+        'Presupuesto de obra.',
+        'Ejecución.',
+        'Supervisión.',
+      ],
     },
     invierte: {
       titulo: 'Invierte seguro',
-      descripcion: 'Te brindamos acompañamiento profesional para tomar decisiones seguras.',
-      video: 'assets/video/invierte.mp4',
-      beneficios: ["Instalaciones certificadas", "Reparaciones rápidas", "Diagnóstico profesional"]
-    }
+      descripcion: 'Ofrecemos soluciones estratégicas para inversiones inmobiliarias.',
+      video: './Servicios/video_2.mp4',
+      beneficios: [
+        'Formalización contractual.',
+        'Ubicación estratégica.',
+        'Facilidades de pago.',
+        'Precios accesibles.',
+        'Orientación en saneamiento físico legal del predio.',
+        'Seriedad en el trato.',
+      ],
+    },
   };
 
   seleccionado: ServicioInfo = {
     titulo: '',
     descripcion: '',
     video: '',
-    beneficios: []
+    beneficios: [],
   } as ServicioInfo;
 
-  constructor(private route: ActivatedRoute) {
-  }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
+    this.route.queryParams.subscribe((params) => {
       const labor = params['labor'] ?? 'registro';
       this.seleccionado = this.servicios[labor];
     });
   }
-
 }

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ── Nav contenedor ──────────────────────────────────────── */
+.nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e8f0df;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  gap: 24px;
+}
+
+/* ── Logo ────────────────────────────────────────────────── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* ── Links desktop ───────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5a6a4a;
+  text-decoration: none;
+  padding-bottom: 3px;
+  transition: color 0.2s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #6bcb3d;
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #1a2210;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* routerLinkActive añade la clase .active */
+.nav-links a.active {
+  color: #1a2210;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ── CTA desktop ─────────────────────────────────────────── */
+.nav-cta-wrap {
+  flex-shrink: 0;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #6bcb3d;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 3px 14px #6bcb3d44;
+}
+
+.nav-cta svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.nav-cta:hover {
+  background: #5bb82e;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 20px #6bcb3d55;
+}
+
+.nav-cta:active {
+  transform: scale(0.97);
+}
+
+/* ── Hamburger ───────────────────────────────────────────── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #1a2210;
+  border-radius: 999px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+/* Animación X cuando está abierto */
+.nav-burger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-burger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Menú móvil ──────────────────────────────────────────── */
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid #e8f0df;
+  background: #ffffff;
+  animation: slideDown 0.2s ease both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-mobile a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5a6a4a;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f5e8;
+  transition: color 0.2s;
+}
+
+.nav-mobile a:last-of-type {
+  border-bottom: none;
+  margin-bottom: 8px;
+}
+
+.nav-mobile a:hover {
+  color: #1a2210;
+}
+
+.nav-mobile .nav-cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .nav-links,
+  .nav-cta-wrap {
+    display: none;
+  }
+
+  .nav-burger {
+    display: flex;
+  }
+}
